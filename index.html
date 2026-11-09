@@ -263,9 +263,9 @@ mark { background: var(--hl); color: inherit; padding: 0 2px; }
     <nav class="tabs" role="tablist" aria-label="메뉴">
       <button class="tab" role="tab" data-go="home" aria-selected="true">홈</button>
       <button class="tab" role="tab" data-go="author" aria-selected="false">저자·책 소개</button>
+      <button class="tab" role="tab" data-go="people" aria-selected="false">인물 분석</button>
       <button class="tab" role="tab" data-go="story" aria-selected="false">줄거리</button>
       <button class="tab" role="tab" data-go="episode" aria-selected="false">대표 에피소드</button>
-      <button class="tab" role="tab" data-go="people" aria-selected="false">인물 분석</button>
       <button class="tab" role="tab" data-go="article" aria-selected="false">관련 기사</button>
       <button class="tab" role="tab" data-go="paper" aria-selected="false">관련 논문</button>
       <button class="tab" role="tab" data-go="debate" aria-selected="false">토론 주제</button>
@@ -300,9 +300,9 @@ mark { background: var(--hl); color: inherit; padding: 0 2px; }
     <h2 class="b-title" style="font-size:clamp(36px,6vw,64px);margin-bottom:30px;">CONTENTS</h2>
     <div class="toc">
       <button type="button" data-go="author"><span class="n">01</span>저자·책 소개</button>
-      <button type="button" data-go="story"><span class="n">02</span>줄거리 소개</button>
-      <button type="button" data-go="episode"><span class="n">03</span>대표 에피소드</button>
-      <button type="button" data-go="people"><span class="n">04</span>인물 분석</button>
+      <button type="button" data-go="people"><span class="n">02</span>인물 분석</button>
+      <button type="button" data-go="story"><span class="n">03</span>줄거리 소개</button>
+      <button type="button" data-go="episode"><span class="n">04</span>대표 에피소드</button>
       <button type="button" data-go="article"><span class="n">05</span>관련 기사</button>
       <button type="button" data-go="paper"><span class="n">06</span>관련 논문</button>
       <button type="button" data-go="debate"><span class="n">07</span>토론 주제</button>
@@ -553,7 +553,7 @@ mark { background: var(--hl); color: inherit; padding: 0 2px; }
   const esc = s => String(s).replace(/[&<>"]/g, c => ({ '&': '&amp;', '<': '&lt;', '>': '&gt;', '"': '&quot;' }[c]));
 
   /* ----- views ----- */
-  const order = ['home', 'author', 'story', 'episode', 'people', 'article', 'paper', 'debate'];
+  const order = ['home', 'author', 'people', 'story', 'episode', 'article', 'paper', 'debate'];
   let cur = 'home';
   function show(id) {
     if (!order.includes(id)) id = 'home';
